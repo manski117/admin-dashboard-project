@@ -12,10 +12,25 @@ h1{
 }
 
 #sidebar-grid{
-  display: grid;
+/*A grid item of main-container-grid*/
   grid-column:1/2;
   grid-row:1/3;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: repeat(12, 2rem);
+  padding: 1rem;
+  gap: 5px;
+  justify-items: start;
+  align-items: center;
   
+/*extra rows created for the empty spaces.*/
+  
+}
+
+.sidebar-item{
+/*size of icons in the sidebar*/
+  max-height:30px;
+  max-width: 30px;
 }
 
 #header{
@@ -28,6 +43,16 @@ h1{
   grid-row: 2/3;
   min-height:20rem;
 }
+
+/*Style of normal links for page*/
+a{
+  text-decoration: none;
+}
+
+a:link{ color: #596D48;}
+a:active { color: #596D48; }
+a:visited { color: #596D48; }
+a:hover { color: orange; }
 
 
 
@@ -47,6 +72,10 @@ h1{
 .l1{
     border: solid black 4px;
     /* Layer 1, main containers for macro page layout */
+}
+
+.l2{
+  border: solid red 3px;
 }
 
 .imgLater{
