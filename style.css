@@ -1,0 +1,27 @@
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    border: solid blue 3px;
+
+}
+
+
+.imgLater{
+    background-image: url(https://picsum.photos/200); 
+    
+}
+
+
+
+
+
+/* Border classes for construction purposes */
+
+.l0{
+    border: solid black 5px;
+    /* Layer 0, main container */
+}
+
+.l1{
+    border: solid red 4px;
+}
