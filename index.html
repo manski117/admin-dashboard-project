@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dash Project</title>
     <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--This will import an icon library called font awesome-->
 </head>
 <body>
     <button class="button" id="btn1" onclick="press(this);">click here</button>
@@ -30,7 +32,38 @@
             <img class="sidebar-item l2" src="https://picsum.photos/50/50" alt="Icon Description"><a class="l2"href="https://picsum.photos/50/50">Support</a>
             <img class="sidebar-item l2" src="https://picsum.photos/50/50" alt="Icon Description"><a class="l2"href="https://picsum.photos/50/50">Privacy</a>
         </div>
-        <div id="header" class="l1">header</div>
+        <div id="header" class="l1">
+            <div class="flexbox-header l2 search-box">
+              <button class="search-button" type="submit">
+        <i id="search-icon" class="fa fa-search"></i>
+      </button>
+<!--This inserts an icon to be used with search bar-->
+              <input type="text" class="search-input" placeholder="Search..">
+              <div id="invisible-searchbar-spacer"></div>
+              <!-- the div above is purposely left blank -->
+              <button id="subscribe-bell" class="header-icon" onclick="press(this)"><i>B</i></button>
+              <img src="https://picsum.photos/50/50" alt="a small user profile pic" id="mini-profile-photo" class="profile-photo">
+              <h2>User Name</h2>
+            </div>
+
+            <div id="profile-banner" class="l2">
+                <div id="left-profile-box" class="l3">
+                    <img src="https://picsum.photos/50/50" alt="the user's profile pic" class="l4" id="profile-pic">
+                    <div class="profile-text">
+                        <div class="hi-there l4">Hi there,</div>
+                        <div class="handle l4">User Name (@handle)</div>
+                    </div>
+                </div>
+                <div id="right-profile-box" class="l3">
+                    <button class="profile-button">New</button>
+                    <button class="profile-button">Upload</button>
+                    <button class="profile-button">Share</button>
+                </div>
+            </div>
+
+
+            
+        </div>
         <div id="main-content-grid" class="l1">content</div>
     </div>
 </body>

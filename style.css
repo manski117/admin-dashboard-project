@@ -1,84 +1,227 @@
-h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: blue;
-    border: solid blue 3px;
 
-}
 
 #main-container-grid{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10rem 1fr;
-}
-
-#sidebar-grid{
-/*A grid item of main-container-grid*/
-  grid-column:1/2;
-  grid-row:1/3;
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  grid-template-rows: repeat(12, 2rem);
-  padding: 1rem;
-  gap: 5px;
-  justify-items: start;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 10rem 1fr;
+  }
   
-/*extra rows created for the empty spaces.*/
-  
-}
-
-.sidebar-item{
-/*size of icons in the sidebar*/
-  max-height:30px;
-  max-width: 30px;
-}
-
-#header{
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-
-#main-content-grid{
-  grid-column: 2/3;
-  grid-row: 2/3;
-  min-height:20rem;
-}
-
-/*Style of normal links for page*/
-a{
-  text-decoration: none;
-}
-
-a:link{ color: #596D48;}
-a:active { color: #596D48; }
-a:visited { color: #596D48; }
-a:hover { color: orange; }
-
-
-
-
-
-
-
-
-
-/* Border classes for construction purposes */
-
-.l0{
-    border: solid purple 5px;
-    /* Layer 0, main container */
-}
-
-.l1{
-    border: solid black 4px;
-    /* Layer 1, main containers for macro page layout */
-}
-
-.l2{
-  border: solid red 3px;
-}
-
-.imgLater{
-    background-image: url(https://picsum.photos/200); 
+  #sidebar-grid{
+  /*A grid item of main-container-grid*/
+    grid-column:1/2;
+    grid-row:1/3;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: repeat(12, 2rem);
+    padding: 1rem;
+    gap: 5px;
+    justify-items: start;
+    align-items: center;
     
-}
+  /*extra rows created for the empty spaces.*/
+    
+  }
+  
+  .sidebar-item{
+  /*size of icons in the sidebar*/
+    max-height:30px;
+    max-width: 30px;
+  }
+  
+  #header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .flexbox-header{
+    display: flex;
+  /*child of header*/
+  }
+  
+  .search-box{
+  /*Flex item of top flexbox-header */
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    
+  }
+  .search-button{
+  /*Flex item of flexbox-header top*/
+    min-height: 20px;
+    height: 30px;
+    width:25px;
+    
+    border-radius:10px;
+  }
+  
+  .search-input{
+    /*Flex item of flexbox-header top*/
+    min-height: 10px;
+    height: 25px;
+    border-radius: 25px;
+    flex: 1;
+    
+  }
+  
+  #invisible-searchbar-spacer{
+    flex: .25;
+  /*This will create a responsive space between the searchbar and profile buttons. The div this property is applied to is left blank on purpose.*/
+  }
+  
+  #subscribe-bell{
+    border-radius: 25px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  #mini-profile-photo{
+    border-radius: 24px;
+    height: 45px;
+    width: 45px;
+  }
+  
+  #profile-banner{
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    
+    grid-row:2/3;
+    grid-column:1/2;
+    max-height: 100%;
+    
+  }
+  
+  #left-profile-box{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+  /* Flex item of profile-banner */
+  }
+  
+  #right-profile-box{
+    /* Flex item of profile-banner */
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  
+  #profile-pic{
+    border-radius: 50px;
+    height: 70px;
+  }
+  
+  .profile-text{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    font-weight: 900;
+  }
+  
+  .hi-there{
+    font-size: 15px;
+  }
+  
+  .handle{
+    font-size: 25px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  #main-content-grid{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    min-height:20rem;
+  }
+  
+  /*Style of normal links for page*/
+  a{
+    text-decoration: none;
+  }
+  
+  a:link{ color: #596D48;}
+  a:active { color: #596D48; }
+  a:visited { color: #596D48; }
+  a:hover { color: orange; }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Border classes for construction purposes */
+  
+  .l0{
+      border: solid purple 5px;
+      /* Layer 0, main container */
+  }
+  
+  .l1{
+      border: solid black 4px;
+      /* Layer 1, main containers for macro page layout */
+  }
+  
+  .l2{
+    border: solid red 3px;
+  }
+  
+  .l3{
+    border: solid orange 2px;
+  }
+  
+  .l4{
+    border: solid green 1px;
+  }
+  
+  .l5{
+    border: solid blue 1px;
+  }
+  
+  .imgLater{
+      background-image: url(https://picsum.photos/200); 
+      
+  }
+  
+  
+  /* Button stuff */
+  
+  button {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background-color: RoyalBlue;
+  }
+  button:active {
+    background-color: #9ca7f0;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  .profile-button{
+    border-radius: 20px;
+  }
+  
+  
