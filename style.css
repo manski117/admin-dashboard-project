@@ -27,6 +27,9 @@
     max-height:30px;
     max-width: 30px;
   }
+  #dashboard-title{
+    color: red;
+  }
   
   #header{
     grid-column: 2/3;
@@ -171,6 +174,16 @@
     max-height: 30%;
     background-color: pink;
     border: solid black 1px;
+  /*Adds a color only to one side of the card*/
+    box-shadow: inset 0.5em 0 0
+      red, 0.2em 0.2em 0.2em
+      rgba(0,0,0,0.3);
+  }
+  .card:hover{
+  /*Makes the card more responsive to user interaction.*/
+    box-shadow: inset 0.5em 0 0
+      red, 0.2em 0.2em 0.2em
+      rgba(0,0,0,0.7);
   }
   
   .announcement-card{
@@ -259,10 +272,24 @@
     text-decoration: none;
   }
   
-  a:link{ color: #596D48;}
-  a:active { color: #596D48; }
-  a:visited { color: #596D48; }
+  a:link{ color: blue;}
+  a:active { color: purple; }
+  a:visited { color: green; }
   a:hover { color: orange; }
+  
+  /*Style of links on dark bg*/
+  .card > a:link{ color: white;}
+  .card > a:active { color: white; }
+  .card > a:visited { color: white; }
+  .card > a:hover { color: white; }
+  
+  a>div.card{
+  /*done soley to remove the visible link formatting from the cards once links are applied.*/
+    color:white;
+  }
+  
+  
+  
   
   
   
@@ -273,15 +300,14 @@
   
   
   /* Border classes for construction purposes */
-  
+  /* 
   .l0{
       border: solid purple 5px;
-      /* Layer 0, main container */
   }
   
   .l1{
       border: solid black 4px;
-      /* Layer 1, main containers for macro page layout */
+  
   }
   
   .l2{
@@ -299,32 +325,46 @@
   .l5{
     border: solid blue 1px;
   }
+   */
   
-  .imgLater{
-      background-image: url(https://picsum.photos/200); 
-      
-  }
   
   
   /* Button stuff */
   
   button {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
     cursor: pointer;
   }
+  .btn{
+      background-color: DodgerBlue;
+    border: none;
+    color: white;
+    font-size: 16px;
+  }
+  .icon-button{
+    background-color: pink;
+    border: none;
+    font-size: 13px;
+    font-weight: 800;
+  }
   
-  button:hover{
+  .btn:hover{
     background-color: RoyalBlue;
   }
-  button:active {
+  .icon-button:hover{
+    background-color: red;
+  }
+  
+  .btn:active {
     background-color: #9ca7f0;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+  .icon-button:active{
+    background-color: DarkRed;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
   
   .profile-button{
     border-radius: 20px;
