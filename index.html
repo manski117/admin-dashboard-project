@@ -42,7 +42,9 @@
               <input type="text" class="search-input" placeholder="Search..">
               <div id="invisible-searchbar-spacer"></div>
               <!-- the div above is purposely left blank -->
-              <button id="subscribe-bell" class="header-icon icon-button" onclick="press(this)"><i>B</i></button>
+              <button id="subscribe-bell-button" class="header-icon icon-button" onclick="press(this)">
+                <i id="bell-icon" class="fa fa-sharp fa-bell"></i>
+            </button>
               <img src="https://img.icons8.com/bubbles/100/000000/pokemon.png" alt="a small user profile pic" id="mini-profile-photo" class="profile-photo">
               <h2>Pikachu</h2>
             </div>
@@ -67,90 +69,108 @@
         </div>
         <div id="main-content-grid" class="l1">
             <div id="your-projects" class="l2">
-                <h3 class="content-title l3">Your Projects</h3>
+                <h1 class="content-title l3">Moves</h1>
                 <div id="card-grid" class="l3 content-box">
                     <a href="https://picsum.photos/50/50">
                         <div class="card">
-                            <div class="card-title">Title Here</div>
-                            <div class="card-content">story content can go here</div>
+                            <div class="card-title">Thundershock</div>
+                            <div class="card-content">Type: &#9889; Power: 40<br>Acc: 100, PP: 30<br>Zaps the enemy with weak electricity</div>
                         </div>
                     </a>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Title Here</div>
-                        <div class="card-content">story content can go here</div>
-                    </div>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Quick Attack</div>
+                            <div class="card-content">Type: &#10038; Power: 40<br>Acc: 100, PP: 30<br>Always moves first</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Growl</div>
+                            <div class="card-content">Type: &#10038; Power: --<br>Acc: 100, PP: 40<br>Lowers enemy attack</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Electro Ball</div>
+                            <div class="card-content">Type: &#9889; Power: ??<br>Acc: 100, PP: 10<br>The faster you are than the enemy, the greater the power</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Thunder Wave</div>
+                            <div class="card-content">Type: &#9889; Power: --<br>Acc: 90, PP: 20<br>Causes paralysis</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Thunderbolt</div>
+                            <div class="card-content">Type: &#9889; Power: 95<br>Acc: 100, PP: 15<br>Strikes enemy with a strong lightning bolt and may paralyze</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Thunder</div>
+                            <div class="card-content">Type: &#9889; Power: 110<br>Acc: 70, PP: 10<br>A very powerful thunderbolt strikes the enemy. Always hits in rain.</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Disarming Voice</div>
+                            <div class="card-content">Type: &#127752; Power: 40<br>Acc: --, PP: 15<br>Lets out a charming cry that does emotional damage. Never misses.</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Volt Tackle</div>
+                            <div class="card-content">Type: &#9889; Power: 120<br>Acc: 100, PP: 15<br>Charges enemy with an electrified body. User takes damage as well.</div>
+                        </div>
+                    </a>
+                    <a href="https://picsum.photos/50/50">
+                        <div class="card">
+                            <div class="card-title">Reversal</div>
+                            <div class="card-content">Type: &#128074; Power: ??<br>Acc: 100, PP: 15<br>An all-out attack that grows stronger the less HP you have.</div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div id="right-sidebar-flexbox">
                 <div id="announcements-flexbox" class="l2 content-box">
-                    <h3 class="content-title">Announcements</h3>
+                    <h1 class="content-title">News</h1>
                     <div class="announcement-card l3 an">
-                        <div class="card-title an l4">title here</div>
-                        <div class="card-content l4 an">content will go here</div>
+                        <div class="card-title an l4">Site Maintenence</div>
+                        <div class="card-content l4 an">Due to rising web hosting costs at Silph co. Web Services, we will be updating the site to be more efficient.</div>
                     </div>
                     <div class="announcement-card l3 an">
-                        <div class="card-title an l4">title here</div>
-                        <div class="card-content l4 an">content will go here</div>
+                        <div class="card-title an l4">Community Hackathon Day</div>
+                        <div class="card-content l4 an">On Sept. 5th, there will be a coding competition open to all members with prizes for the top projects</div>
                     </div>
                     <div class="announcement-card l3 an">
-                        <div class="card-title an l4">title here</div>
-                        <div class="card-content l4 an">content will go here</div>
+                        <div class="card-title an l4">Updated Privacy Policy</div>
+                        <div class="card-content l4 an">Due to the recent exploits of Rockets and the existance of rotoms, all users must read and agree to new warnings about data privacy.</div>
                     </div>
                 </div>
                 <div id="trending-flexbox" class="l2 content-box">
-                    <h3 class="content-title l3">Trending</h3>
+                    <h1 class="content-title l3">Friends</h1>
                     <div class="trending-card l3 tr">
-                        <img src="https://picsum.photos/50/50" alt="user profile pic" class="l4 card-profile-pic tr">
+                        <img src="https://img.icons8.com/color/48/000000/meowth.png" alt="user profile pic" class="l4 card-profile-pic tr">
                         <div class="trend-text">
-                            <h4 class="l5 tr profile">@handle</h4>
-                            <h6>Project Title</h6>
+                            <h4 class="l5 tr profile">@meowth</h4>
+                            <h6>#payday is here to stay</h6>
                         </div>
                     </div>
                     <div class="trending-card l3 tr">
-                        <img src="https://picsum.photos/50/50" alt="user profile pic" class="l4 card-profile-pic tr">
+                        <img src="https://img.icons8.com/color/48/000000/psyduck.png" alt="user profile pic" class="l4 card-profile-pic tr">
                         <div class="trend-text">
-                            <h4 class="l5 tr profile">@handle</h4>
-                            <h6>Project Title</h6>
+                            <h4 class="l5 tr profile">@psyduck</h4>
+                            <h6>Help! How do you print Hello World?</h6>
                         </div>
                     </div>
                     <div class="trending-card l3 tr">
-                        <img src="https://picsum.photos/50/50" alt="user profile pic" class="l4 card-profile-pic tr">
+                        <img src="https://img.icons8.com/plasticine/100/000000/bullbasaur.png" alt="user profile pic" class="l4 card-profile-pic tr">
                         <div class="trend-text">
-                            <h4 class="l5 tr profile">@handle</h4>
-                            <h6>Project Title</h6>
+                            <h4 class="l5 tr profile">@bulbyBoy</h4>
+                            <h6>Growing a life-changing app</h6>
                         </div>
                     </div>
                 </div>

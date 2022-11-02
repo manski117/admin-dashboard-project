@@ -1,373 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+h2, h3, h4, h5, h6, div{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+h1 {
+/*Makes the h1 elements really pop*/
+  font-family: 'Bangers', cursive !important;
+  margin-bottom: 10px;
+  
+  color: #ed493e;
+  font-size: 2em;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  
+  text-shadow: 1px 1px hsl(50, 50%, 45%),
+               2px 2px hsl(50, 50%, 40%),
+               3px 3px hsl(50, 50%, 35%),
+               4px 4px hsl(50, 50%, 34%),
+               5px 5px hsl(50, 50%, 33%),
+               6px 6px hsl(50, 50%, 32%),
+               7px 7px hsl(50, 50%, 31%),
+               8px 8px hsl(50, 50%, 30%),
+               9px 9px hsl(50, 50%, 29%),
+               10px 10px hsl(50, 50%, 28%),
+               10px 10px 30px rgba(0,0,0,.7),
+}
+
+
 
 
 #main-container-grid{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 10rem 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 10rem 1fr;
+  gap: 5px;
+}
+
+#sidebar-grid{
+/*A grid item of main-container-grid*/
+  grid-column:1/2;
+  grid-row:1/3;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: repeat(12, 2rem);
+  padding: 1rem;
+  gap: 5px;
+  justify-items: start;
+  align-items: center;
+  background-color: #cc2e05;
   
-  #sidebar-grid{
-  /*A grid item of main-container-grid*/
-    grid-column:1/2;
-    grid-row:1/3;
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: repeat(12, 2rem);
-    padding: 1rem;
-    gap: 5px;
-    justify-items: start;
-    align-items: center;
-    
-  /*extra rows created for the empty spaces.*/
-    
-  }
+/*extra rows created for the empty spaces.*/
   
-  .sidebar-item{
-  /*size of icons in the sidebar*/
-    max-height:30px;
-    max-width: 30px;
-  }
-  #dashboard-title{
-    color: red;
-  }
+}
+
+.sidebar-item{
+  filter: invert(100%);
+/*This was done to make otherwise black svg icons appear white so they could pop on a colored background*/
+}
+
+.sidebar-item{
+/*size of icons in the sidebar*/
+  max-height:30px;
+  max-width: 30px;
+}
+#dashboard-title{
+  color: red;
+}
+
+#header{
+  background-color: #fba70e;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.flexbox-header{
+  display: flex;
+/*child of header*/
+}
+
+.search-box{
+/*Flex item of top flexbox-header */
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
   
-  #header{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  
-  .flexbox-header{
-    display: flex;
-  /*child of header*/
-  }
-  
-  .search-box{
-  /*Flex item of top flexbox-header */
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    grid-row: 1/2;
-    grid-column: 1/2;
-    
-  }
-  .search-button{
+}
+
+
+.search-input{
   /*Flex item of flexbox-header top*/
-    min-height: 20px;
-    height: 30px;
-    width:25px;
-    
-    border-radius:10px;
-  }
+  min-height: 10px;
+  height: 25px;
+  border-radius: 25px;
+  flex: 1;
+/*flex:1 means it will grow proportionally as the screen grows
   
-  .search-input{
-    /*Flex item of flexbox-header top*/
-    min-height: 10px;
-    height: 25px;
-    border-radius: 25px;
-    flex: 1;
-    
-  }
+}
+
+#invisible-searchbar-spacer{
+  flex: .25;
+/*This will create a responsive space between the searchbar and profile buttons. The div this property is applied to is left blank on purpose.*/
+}
+
+#subscribe-bell{
+  border-radius: 25px;
+  height: 20px;
+  width: 20px;
+}
+
+#mini-profile-photo{
+  border-radius: 24px;
+  height: 45px;
+  width: 45px;
+}
+
+#profile-banner{
+  display: flex;
+  justify-content: space-between;
   
-  #invisible-searchbar-spacer{
-    flex: .25;
-  /*This will create a responsive space between the searchbar and profile buttons. The div this property is applied to is left blank on purpose.*/
-  }
+  grid-row:2/3;
+  grid-column:1/2;
+  max-height: 100%;
   
-  #subscribe-bell{
-    border-radius: 25px;
-    height: 20px;
-    width: 20px;
-  }
-  
-  #mini-profile-photo{
-    border-radius: 24px;
-    height: 45px;
-    width: 45px;
-  }
-  
-  #profile-banner{
-    background-color: #ccc;
-    display: flex;
-    justify-content: space-between;
-    
-    grid-row:2/3;
-    grid-column:1/2;
-    max-height: 100%;
-    
-  }
-  
-  #left-profile-box{
-    display: flex;
-    width: 350px;
-    justify-content: space-between;
+}
+
+#left-profile-box{
+  display: flex;
+  width: 350px;
+  justify-content: space-around;
+/* Flex item of profile-banner */
+}
+
+#right-profile-box{
   /* Flex item of profile-banner */
-  }
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+#profile-pic{
+  border-radius: 50px;
+  height: 70px;
+}
+
+.profile-text{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  font-weight: 900;
+}
+
+.hi-there{
+  font-size: 15px;
+}
+
+.handle{
+  font-size: 25px;
+}
+
+
+
+
+#main-content-grid{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  min-height:20rem;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50% 50%;
+  gap: 5px;
+}
+
+.content-title{
+  margin-bottom: 10px;
+}
+
+#your-projects{
+  grid-row: 1/-1;
+  grid-column: 1/2;
+}
+
+#card-grid{
   
-  #right-profile-box{
-    /* Flex item of profile-banner */
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   
+}
+.card{
+  min-height: 120px;
+  min-width: 200px;
+  max-width: 15rem;
+  max-height: 300px;
+  background-color: #ffae00;
+  border: solid black 1px;
+/*Adds a color only to one side of the card*/
+  box-shadow: inset 0.5em 0 0
+    #ff9191, 0.2em 0.2em 0.2em
+    rgba(0,0,0,0.3);
+  margin-left: 5px;
+}
+.card:hover{
+/*Makes the card more responsive to user interaction.*/
+  box-shadow: inset 0.5em 0 0
+    red, 0.2em 0.2em 0.2em
+    rgba(0,0,0,0.7);
+}
+
+.card-title, .card-content{
+  margin-left: 10px;
+  line-height: 1.5;
+}
+.card-title{
+  font-size: 1rem;
+}
+.card-content{
+  font-size: 0.8rem;
+}
+
+.announcement-card{
+  min-height: 70px;
+  max-height: 200px;
+  width: 100%;
   
+  background-color: #cc2e05;
+  border: none;
+  outline: none;
+  border-radius:8px;   
+}
+
+
+#announcements-flexbox * {
+/*ALL decendents of announcements-flexbox will have this quality*/
+/*   max-width:30px; */
+}
+
+#announcements-flexbox{
+  grid-row: 1/2;
+  grid-column:2/3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+/*   height: 290px; */
+}
+
+#right-sidebar-flexbox{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+
+#trending-flexbox{
+  grid-row:2/-1;
+  grid-column:2/3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   
+}
+.trending-card{
+  min-height: 70px;
+  max-height: 200px;
+  width: 100%;
   
-  #profile-pic{
-    border-radius: 50px;
-    height: 70px;
-  }
+  background-color: orange;
+  border: solid black 1px;
+  display: flex;
+  gap:10px;
+  justify-content: left;
+  align-items: center; 
+}
+
+.card-profile-pic{
+  height: 40px;
+  border-radius: 30px; 
+}
+
+.trend-text{
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  gap:0;
+  justify-content: center;
+}
+
+h4{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+h6{
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+
+/*Style of normal links for page*/
+a{
+  text-decoration: none;
+}
+
+a:link{ color: white;}
+a:active { color: white; }
+a:visited { color: white; }
+a:hover { 
+  color: white;
+  transform: translateY(1px);
+  transform: scale(1.1);
   
-  .profile-text{
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
-    font-weight: 900;
-  }
+  animation: shake 0.4s;
   
-  .hi-there{
-    font-size: 15px;
-  }
+/*how fast the animation progresses*/
+  animation-iteration-count: 1;
+/*How long the animation progresses. Set to "infinite" to have some fun*/
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*Style of links on dark bg*/
+.card > a:link{ color: white;}
+.card > a:active { color: white; }
+.card > a:visited { color: white; }
+.card > a:hover { color: white; }
+
+a>div.card{
+/*done soley to remove the visible link formatting from the cards once links are applied.*/
+  color:white;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Button stuff */
+
+button {
+  cursor: pointer;
+}
+.btn{
+    background-color: #cc2e05;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+.icon-button{
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  outline: none; 
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
   
-  .handle{
-    font-size: 25px;
-  }
+}
+
+.search-button{
+/*Flex item of flexbox-header top*/
+  min-height: 20px;
+  height: 25px;
+  width:25px;
   
-  
-  
-  
-  #main-content-grid{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    min-height:20rem;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 50% 50%;
-  }
-  
-  .content-title{
-    margin: 0;
-  }
-  
-  #your-projects{
-    grid-row: 1/-1;
-    grid-column: 1/2;
-  }
-  
-  #card-grid{
-    
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    
-  }
-  .card{
-    min-height: 100px;
-    min-width: 200px;
-    max-width: 30%;
-    max-height: 30%;
-    background-color: pink;
-    border: solid black 1px;
-  /*Adds a color only to one side of the card*/
-    box-shadow: inset 0.5em 0 0
-      red, 0.2em 0.2em 0.2em
-      rgba(0,0,0,0.3);
-  }
-  .card:hover{
-  /*Makes the card more responsive to user interaction.*/
-    box-shadow: inset 0.5em 0 0
-      red, 0.2em 0.2em 0.2em
-      rgba(0,0,0,0.7);
-  }
-  
-  .announcement-card{
-    min-height: 70px;
-    max-height: 200px;
-    width: 100%;
-    
-    background-color: azure;
-    border: solid black 1px;
-  }
-  
-  
-  #announcements-flexbox * {
-  /*ALL decendents of announcements-flexbox will have this quality*/
-  /*   max-width:30px; */
-  }
-  
-  #announcements-flexbox{
-    grid-row: 1/2;
-    grid-column:2/3;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  /*   height: 290px; */
-  }
-  
-  #right-sidebar-flexbox{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  
-  
-  
-  
-  #trending-flexbox{
-    grid-row:2/-1;
-    grid-column:2/3;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
-  }
-  .trending-card{
-    min-height: 70px;
-    max-height: 200px;
-    width: 100%;
-    
-    background-color: azure;
-    border: solid black 1px;
-    display: flex;
-    gap:10px;
-    justify-content: left;
-    align-items: center; 
-  }
-  
-  .card-profile-pic{
-    height: 40px;
-    border-radius: 30px; 
-  }
-  
-  .trend-text{
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    gap:0;
-    justify-content: center;
-  }
-  
-  h4{
-    margin: 0;
-    font-size: 13px;
-    font-weight: 800;
-  }
-  h6{
-    margin: 0;
-    font-size: 10px;
-    font-weight: 400;
-  }
-  
-  
-  
-  /*Style of normal links for page*/
-  a{
-    text-decoration: none;
-  }
-  
-  a:link{ color: blue;}
-  a:active { color: purple; }
-  a:visited { color: green; }
-  a:hover { color: orange; }
-  
-  /*Style of links on dark bg*/
-  .card > a:link{ color: white;}
-  .card > a:active { color: white; }
-  .card > a:visited { color: white; }
-  .card > a:hover { color: white; }
-  
-  a>div.card{
-  /*done soley to remove the visible link formatting from the cards once links are applied.*/
-    color:white;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* Border classes for construction purposes */
-  /* 
-  .l0{
-      border: solid purple 5px;
-  }
-  
-  .l1{
-      border: solid black 4px;
-  
-  }
-  
-  .l2{
-    border: solid red 3px;
-  }
-  
-  .l3{
-    border: solid orange 2px;
-  }
-  
-  .l4{
-    border: solid green 1px;
-  }
-  
-  .l5{
-    border: solid blue 1px;
-  }
-   */
-  
-  
-  
-  /* Button stuff */
-  
-  button {
-    cursor: pointer;
-  }
-  .btn{
-      background-color: DodgerBlue;
-    border: none;
-    color: white;
-    font-size: 16px;
-  }
-  .icon-button{
-    background-color: pink;
-    border: none;
-    font-size: 13px;
-    font-weight: 800;
-  }
-  
-  .btn:hover{
-    background-color: RoyalBlue;
-  }
-  .icon-button:hover{
-    background-color: red;
-  }
-  
-  .btn:active {
-    background-color: #9ca7f0;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  .icon-button:active{
-    background-color: DarkRed;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  
-  
-  .profile-button{
-    border-radius: 20px;
-  }
-  
-  
+  border-radius:25px;
+}
+
+.btn:hover{
+  background-color: #cc2e05;
+}
+.icon-button:hover{
+  transform: translateY(2px);
+  transform: scale(1.3);
+}
+
+.btn:active {
+  background-color: #9ca7f0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.icon-button:active{
+  background-color: DarkRed;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+.profile-button{
+  border-radius: 20px;
+}
+
+/*Fancy background stuff*/
+body{
+  background-color: #e4ddaf;
+  background-image: url(../admin-dashboard-project/images/pokeball-background.png);
+}
